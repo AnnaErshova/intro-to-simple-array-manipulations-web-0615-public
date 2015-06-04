@@ -100,7 +100,7 @@ describe "manipulating arrays" do
     another_esoteric_language = "Malbolge"
 
     it "inserts an element to the of the seventh position in list_of_esoteric_programming_languages array" do
-      answer = list_of_esoteric_programming_languages.insert(6,"Malbolge")
+      answer = list_of_esoteric_programming_languages.insert(6,another_esoteric_language)
       expect(answer).to eq(["Ante", "ArnoldC", "Befunge", "Binary lambda calculus", "Chef", "GolfScript", "Malbolge", "Ook!"])
     end
 
@@ -125,6 +125,7 @@ describe "manipulating arrays" do
 
     it "returns a new array that is a combination of two or more arrays" do
       new_array = [private_colleges_in_newyork,military_academies_in_newyork].flatten
+      # private_colleges_in_newyork.push.military_academies_in_newyork.flatten
       expect(new_array.count).to eq(8)
     end
   end
